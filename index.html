@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Meta-Information -->
+    <title>Rob VanCleave | Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Danlaw Style Guide">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Our Website CSS Styles -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+
+    <link rel="stylesheet" href="css/simple-sidebar-min.css">
+    <!-- <link rel="stylesheet" href="css/time.css"> -->
+
+
+
+  
+    
+
+</head>
+
+<body ng-app="tutorialWebApp">
+    <div id="wrapper" class="toggled">
+        <div class="sticky">
+            <span style="padding-right:5%;">
+                <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars fa-lg rotate" aria-hidden="true"></i></a>         
+            </span>
+            <span>
+                <a href="https://www.facebook.com/rob.vancleave.1"><i class="fa fa-facebook" aria-hidden="true" class="facebook"></i></a>&nbsp;&nbsp;
+                            <a href="https://www.linkedin.com/in/robvancleave/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                            <a href="https://gitlab.com/users/robbvann/projects"><i class="fa fa-gitlab" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </span>
+        </div>
+        
+        <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+        <!-- Our Website Content Goes Here -->
+
+        <div ng-include='"templates/sidebar.html"'></div>
+
+        <div ng-view></div>
+        <div ng-include='"templates/masonry-min.html"'></div>
+        <div ng-include='"templates/time.html"'></div>
+        <div ng-include='"templates/contact.html"'></div>
+        
+        <div class="row-no-padding">
+        <div class="col-lg-12">
+            <div class="sticky-foot text-center">
+            <p class="muted-credit" style="font-size:9px;"><i class="fa fa-copyright" aria-hidden="true"></i> 2017 | Rob VanCleave</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- font awesome -->
+    <script src="https://use.fontawesome.com/0148df8f16.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:300" rel="stylesheet">
+
+    
+    <!-- masonry grid -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- Vendor: Javascripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+
+
+
+    <!-- Our Website Javascripts -->
+    <script src="js/main-min.js"></script>
+
+
+
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".button").click(function() {
+                $("#myModal").modal('show');
+            });
+        });
+
+    </script>
+    <script>
+        $(".btn").on("click", function() {
+            $(".alert").removeClass("in").show();
+            $(".alert").delay(200).addClass("in").fadeOut(9000);
+        });
+
+    </script>
+    <script>
+        $('#menu-toggle').click(function() {
+            $(this).next('a').slideToggle('500');
+            $(this).find('i').toggleClass('fa-bars fa-chevron-left')
+        });
+
+    </script>
+
+
+</body>
+
+</html>
